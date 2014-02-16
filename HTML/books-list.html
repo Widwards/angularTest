@@ -1,0 +1,12 @@
+﻿<div ng-controller="BooksListCtrl">
+	<input type="text" ng-model="query">
+	<div class="col-sm-3">
+		<ul>
+			<li ng-repeat="book in books | filter:query" ng-click="setPage(book.Id)">{{book.Id}}{{book.Name}}</li>
+		</ul>
+	</div>
+	<div class="row" id="ajax-place">
+		 <div ng-bind-html="BookView" style="width: 600px; height: 600px;"></div>
+	</div>
+	
+</div>
